@@ -1,0 +1,152 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "随行",
+				"navigationStyle": "custom",
+				"usingComponents": {
+					"as-channel": "/components/channel",
+					"as-trip": "/components/trip"
+				}
+			}
+		},
+		{
+			"path": "pages/index/route/route",
+			"style": {
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
+			}
+		}, {
+			"path": "pages/find/find",
+			"style": {
+				"navigationBarTitleText": "发现",
+				"navigationStyle": "custom",
+				"usingComponents": {
+					"as-channel": "/components/channel",
+					"as-post": "/components/post"
+				}
+			}
+		},
+		{
+			"path": "pages/map/map",
+			"style": {
+				"navigationBarTitleText": "导航",
+				"navigationStyle": "custom",
+				"enablePullDownRefresh": false
+			}
+		}, {
+			"path": "pages/message/message",
+			"style": {
+				"navigationStyle": "custom",
+				"usingComponents": {
+					"as-message": "/components/message"
+				}
+			}
+		}, {
+			"path": "pages/my/my",
+			"style": {
+				"navigationBarBackgroundColor": "#fff",
+				"usingComponents": {
+					"as-cell": "/components/cell"
+				}
+			}
+
+		}, {
+			"path": "components/channel",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/bus/bus",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "components/trip",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "components/post",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/index/chat/chat",
+			"style": {
+				"navigationBarTitleText": "随心",
+				"enablePullDownRefresh": false
+			}
+
+		}, {
+			"path": "pages/message/dialog/dialog",
+			"style": {
+				"navigationBarTitleText": "",
+				"enablePullDownRefresh": false
+			}
+
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarBackgroundColor": "#F2F2F2",
+		"backgroundColor": "#F2F2F2",
+		"backgroundColorBottom": "#F2F2F2",
+		"enablePullDownRefresh": true,
+		"usingComponents": {
+			"van-button": "/components/message"
+		}
+	},
+	"tabBar": {
+		"color": "#000000",
+		"selectedColor": "#03A772",
+		"backgroundColor": "#fff",
+		"borderStyle": "none",
+		"list": [{
+				"text": "随行",
+				"pagePath": "pages/index/index",
+				"iconPath": "static/icons/home.png",
+				"selectedIconPath": "static/icons/active_home.png"
+			}, {
+				"text": "发现",
+				"pagePath": "pages/find/find",
+				"iconPath": "static/icons/find.png",
+				"selectedIconPath": "static/icons/active_find.png"
+			},
+			{
+				"text": "导航",
+				"pagePath": "pages/map/map",
+				"iconPath": "static/icons/map.png",
+				"selectedIconPath": "static/icons/active_map.png"
+			}, {
+				"text": "信息",
+				"pagePath": "pages/message/message",
+				"iconPath": "static/icons/message.png",
+				"selectedIconPath": "static/icons/active_message.png"
+			}, {
+				"text": "我的",
+				"pagePath": "pages/my/my",
+				"iconPath": "static/icons/my.png",
+				"selectedIconPath": "static/icons/active_my.png"
+			}
+		]
+	},
+	"condition": {
+		"current": 0,
+		"list": [{
+			"name": "我的",
+			"path": "pages/my/my",
+			"query": "id=login"
+		}]
+	},
+	"uniIdRouter": {}
+}
